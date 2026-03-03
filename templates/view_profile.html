@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-5 shadow-lg text-center">
+
+    <h2 class="mb-3">{{ user.name }}</h2>
+
+    {% if user.profile_photo %}
+        <img src="{{ url_for('static', filename='uploads/' + user.profile_photo) }}"
+             class="rounded-circle mb-3"
+             width="150">
+    {% endif %}
+
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone or "Not added" }}</p>
+    <p><strong>Location:</strong> {{ user.location or "Not added" }}</p>
+    <p><strong>LinkedIn:</strong> {{ user.linkedin or "Not added" }}</p>
+    <p><strong>GitHub:</strong> {{ user.github or "Not added" }}</p>
+
+    <hr>
+
+    <h5>Bio</h5>
+    <p>{{ user.bio or "No bio added yet." }}</p>
+
+    <a href="{{ url_for('profile') }}" class="btn btn-custom mt-3">
+        Edit Profile
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="card shadow-lg p-5 text-center" style="max-width: 600px; width: 100%;">
+
+        <h1 class="mb-3">🚀 AI Resume & Portfolio Builder</h1>
+
+        <p class="mb-4">
+            Build professional resumes, cover letters, and portfolios powered by AI.
+            Stand out and land your dream job.
+        </p>
+
+        <div class="d-grid gap-3">
+            <a href="{{ url_for('register') }}" class="btn btn-custom">
+                Register
+            </a>
+
+            <a href="{{ url_for('login') }}" class="btn btn-outline-light">
+                Login
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

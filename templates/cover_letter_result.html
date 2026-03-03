@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-5 shadow-lg">
+
+    <h2 class="mb-4">Your Cover Letter ✉️</h2>
+
+    <div style="white-space: pre-wrap;">
+        {{ cover_letter }}
+    </div>
+
+    <a href="{{ url_for('dashboard') }}" class="btn btn-custom mt-4">
+        Back to Dashboard
+    </a>
+
+</div>
+
+{% endblock %}

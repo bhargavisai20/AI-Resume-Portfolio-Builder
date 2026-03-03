@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-4 shadow-lg">
+    <h2 class="mb-4">Create Resume 📝</h2>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label>Skills</label>
+            <textarea name="skills" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Education</label>
+            <textarea name="education" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Experience</label>
+            <textarea name="experience" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Projects</label>
+            <textarea name="projects" class="form-control"></textarea>
+        </div>
+
+        <button class="btn btn-custom">Save Resume</button>
+    </form>
+</div>
+
+{% endblock %}

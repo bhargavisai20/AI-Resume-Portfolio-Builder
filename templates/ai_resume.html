@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-5 shadow-lg">
+
+    <h2 class="text-center mb-4">Professional Resume 🤖</h2>
+
+    <div class="resume-content">
+
+        {{ ai_resume | replace('\n', '<br>') | safe }}
+
+    </div>
+
+    <hr>
+
+    <h5>Resume Score: {{ score }}/100</h5>
+
+    <ul>
+        {% for suggestion in suggestions %}
+        <li>{{ suggestion }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('download_resume') }}" class="btn btn-custom mt-3">
+        Download PDF
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-5 shadow-lg mx-auto" style="max-width:600px;">
+
+    <h2 class="mb-4 text-center">Generate Cover Letter 📄</h2>
+
+    <form method="POST">
+
+        <div class="mb-3">
+            <label>Job Role</label>
+            <input type="text" name="job_role" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Company Name</label>
+            <input type="text" name="company_name" class="form-control" required>
+        </div>
+
+        <button class="btn btn-custom w-100">Generate</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
